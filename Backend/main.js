@@ -35,6 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 filtreBtn.textContent = filtre;
 
                 // Ajout de l'événement pour appliquer le filtre et changer le style
+                if (filtre === 'Tous') {
+                    filtreBtn.classList.add('active');
+                }
+
                 filtreBtn.addEventListener('click', () => {
                     appliquerFiltre(filtre);
                     // Retirer la classe active de tous les boutons
