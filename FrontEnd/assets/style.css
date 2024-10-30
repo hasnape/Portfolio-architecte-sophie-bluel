@@ -123,6 +123,7 @@ body {
 ol,
 ul {
 	list-style: none;
+	margin-left: 75px;
 }
 
 blockquote,
@@ -162,7 +163,7 @@ h1 {
 	color: #B1663C;
 }
 
-h1>span {
+h1 span {
 	font-family: 'Work Sans';
 	font-size: 10px;
 	letter-spacing: 0.1em;
@@ -294,6 +295,8 @@ button p {
 	grid-row-gap: 20px;
 }
 
+
+
 .gallery img {
 	width: 100%;
 	margin: 0 0 10px 0;
@@ -339,7 +342,8 @@ button p {
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 
-input[type="submit"] {
+input[type="submit"],
+.submit {
 	font-family: 'Syne';
 	font-weight: 700;
 	color: white;
@@ -349,6 +353,8 @@ input[type="submit"] {
 	text-align: center;
 	border-radius: 60px;
 }
+
+
 
 #mot-de-passe {
 	display: flex;
@@ -378,7 +384,7 @@ nav a:active {
 /* footer */
 footer {
 	width: 100%;
-	background-color: #FFFFFF;
+	background-color: #FFF;
 	padding: 20px 0;
 }
 
@@ -390,6 +396,192 @@ footer nav a {
 }
 
 
+.modal {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(0, 0, 0, 0.5);
+}
+
+.modal span {
+	display: none;
+}
+
+/* .modal h2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: black;
+	font-family: 'Work Sans';
+	font-weight: 500;
+	font-size: 35px;
+	margin: 50px;
+} */
+
+.modal-wrapper {
+	width: 793px;
+	height: 830px;
+	padding: 20px;
+	background-color: #FFF;
+	border-radius: 2%;
+}
+
+/* Styles pour la galerie */
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.gallery ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+}
+
+.gallery li {
+	flex: 1 1 calc(33.333% - 10px);
+	margin: 5px;
+}
+
+
+.gallery img {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 5px;
+}
+
+/* Styles pour la galerie */
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+
+.gallery ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0px 0px 100px;
+}
+
+
+.gallery2 li {
+
+	margin: 5px;
+}
+
+
+
+.gallery img {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 5px;
+}
+
+/* Styles pour la modale */
+.modal img {
+	max-width: 100%;
+	max-height: 70vh;
+	width: 113px;
+	height: auto;
+	margin: 0 0 17px 0;
+	display: block;
+	border-radius: 5px;
+}
+
+.separator {
+	border-top: 1px solid #000;
+	width: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 20px 0px 40px 154px;}
+
+.Ajouter {
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin: 2em auto;
+	width: 180px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	border-radius: 60px;
+}
+
+.js-modal-close {
+	position: absolute;
+	top: 10px;
+	right: 570px;
+	background: none;
+	border: none;
+	font-size: 2.5em;
+	cursor: pointer;
+	color: black;
+}
+
+.js-modal-close2 {
+	position: absolute;
+	top: 10px;
+	right: 570px;
+	background: none;
+	border: none;
+	font-size: 2.5em;
+	cursor: pointer;
+	color: black;
+}
+
+/* Style du bouton de suppression dans la modale */
+.delete-btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	bottom: 87px;
+	right: 9px;
+	width: 26px;
+	height: 25px;
+	padding: 4px;
+	background-color: #ffffff;
+	display: flex;
+	align-items: flex-start;
+	border-radius: 10%;
+	justify-content: center;
+}
+
+.modal li {
+	position: relative;
+		display: inline-flex;
+		margin: 10px;
+}
+
+/* Modal sup */
+
+.modal {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(0, 0, 0, 0.5);
+}
 
 /* Page login */
 
@@ -408,3 +600,151 @@ footer nav a {
 	text-align: center;
 	border-radius: 60px;
 }
+
+/* Styles pour le modal d'ajout de photo */
+#addPhotoModal {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+	/* Assurez-vous que le modal est au-dessus des autres éléments */
+}
+
+.addPhotoModal h2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: black;
+	font-family: 'Work Sans';
+	font-weight: 500;
+	font-size: 35px;
+	margin: 50px;
+}
+
+.modal-wrapper {
+	width: 793px;
+	height: auto;
+	/* Changez la hauteur pour s'adapter au contenu */
+	padding: 20px;
+	background-color: #FFF;
+	border-radius: 2%;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+	/* Ajoutez une ombre si nécessaire */
+}
+
+.js-modal-close {
+	position: relative;
+	top: 10px;
+	right: 20px;
+	/* Ajustez selon vos besoins */
+	background: none;
+	border: none;
+	font-size: 2.5em;
+	cursor: pointer;
+	color: black;
+}
+
+/* Formulaire dans le modal */
+#addPhotoForm {
+	display: flex;
+	flex-direction: column;
+}
+
+#addPhotoForm label {
+	margin-top: 20px;
+	font-family: 'Syne';
+	font-weight: 600;
+}
+
+#addPhotoForm input[type="text"],
+#addPhotoForm select,
+#addPhotoForm input[type="file"] {
+	height: 50px;
+	font-size: 1em;
+	border: 1px solid #ccc;
+	/* Ajoutez une bordure pour les champs de formulaire */
+	margin-top: 5px;
+	padding: 10px;
+
+	height: 50px;
+		font-size: 1.2em;
+		border: none;
+		box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#addPhotoForm button {
+		width: 270px;
+			height: 45px;
+			border-radius: 60px;
+			margin: 40px 0px;
+			border: none;
+			background-color: #A7A7A7;
+			color: #FFFFFF;
+			font-family: 'Syne', sans-serif;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 19.2px;
+			text-align: center;
+			cursor: pointer;
+			transition: background-color 0.3s, color 0.3s;
+			position: relative;
+			left: 255px;
+}
+
+.custom-file-upload {
+	background: none;
+		border: none;
+		cursor: pointer;
+		position: absolute;
+		bottom: 87px;
+		right: 9px;
+		width: 26px;
+		height: 25px;
+		padding: 4px;
+		display: flex;
+		align-items: flex-start;
+		border-radius: 10%;
+		justify-content: center;
+	background-color: #CBD6DC;
+	color: #306685;
+	
+}
+
+.custom-file-upload:hover {
+	background-color: #0056b3;
+	/* Couleur au survol */
+}
+
+.sidebar-bar {
+	background-color: #f4f4f4;
+	/* Couleur de fond */
+	padding: 10px;
+	/* Espace interne */
+	text-align: center;
+	/* Alignement du texte */
+	font-weight: bold;
+	/* Texte en gras */
+	border-bottom: 1px solid #ccc;
+	/* Ligne de séparation */
+	margin-bottom: 10px;
+	/* Espacement avec les éléments suivants */
+}
+
+#titlemodal{
+display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    color: black;
+	    font-family: 'Work Sans';
+	    font-weight: 500;
+	    font-size: 35px;
+	    margin: 50px;
+}
+	    
+ 
